@@ -3,10 +3,13 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-        'curso' : 'Programação Web com Django Framework',
+        'curso' : 'Programação Web com Django Framework, página Index!',
     }
 
     return render(request, 'index.html', context)
 
 def contato(request):
-    return render(request, 'contato.html')
+    context = {
+        'cursonocontato' : 'Programação Web com Django Framework, página de contato!',
+    }
+    return render(request, 'contato.html', context)
